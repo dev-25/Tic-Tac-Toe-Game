@@ -1,0 +1,133 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+  }
+  
+  body {
+	color: #545454;
+	display: flex;
+	font-family: sans-serif;
+	justify-content: center;
+  }
+  
+  .container {
+	background: #c95bf5;
+	margin: 40px;
+	padding: 50px;
+	border-radius: 25px;
+	border: solid #4f058b 5px;
+  }
+  
+  .title {
+	text-align: center;
+	color: black;
+  }
+  
+  .title span {
+	color: white;
+  }
+  
+  .status-action {
+	display: flex;
+	margin-top: 25px;
+	font-size: 25px;
+	justify-content: space-around;
+	height: 30px;
+	color: black;
+  }
+  
+  .status span {
+	color: white;
+  }
+  
+  .reset {
+	cursor: pointer;
+
+  }
+  
+  .reset:hover {
+	color: white;
+  }
+  
+  .game-grid {
+	background: #7f1ca7;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 12px;
+	margin-top: 50px;
+  }
+  
+  .game-cell {
+	background: #c95bf5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	height: 100px;
+	width: 100px;
+  }
+  
+  .x,
+  .o {
+	cursor: default;
+  }
+  
+  .x::after {
+	content: '×';
+	font-size: 100px;
+	color: rgb(26, 24, 24);
+  }
+  
+  .o::after {
+	content: '○';
+	color: #F2EBD3;
+	font-size: 125px;
+  }
+  
+  .won::after {
+	color: #BD022F;
+	background-color: red;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+	.game-grid {
+	  margin-top: 25px;
+	  grid-gap: 10px;
+	}
+  
+	.game-cell {
+	  height: 150px;
+	  width: 150px;
+	}
+  
+	.x::after {
+	  font-size: 150px;
+	}
+  
+	.o::after {
+	  font-size: 175px;
+	}
+  }
+  
+  @media only screen and (max-width: 540px) {
+	.container {
+	  margin: 25px;
+	  padding: 25px;
+	}
+  
+	.game-cell {
+	  height: 100px;
+	  width: 100px;
+	}
+  
+	.x::after {
+	  font-size: 100px;
+	}
+  
+	.o::after {
+	  font-size: 125px;
+	}
+  }
